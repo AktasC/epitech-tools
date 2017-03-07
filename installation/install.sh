@@ -82,7 +82,6 @@ function handle_error
 function get_os_type
 {
 	which pacman &> /dev/null && os="archlinux"
-	which apt &> /dev/null && os="lmde"
   which apt-get &> /dev/null && os="debian"
 	which dnf &> /dev/null && os="fedora"
   which yum &> /dev/null && os="old_fedora"
@@ -116,9 +115,6 @@ function sys_upgrade
     archlinux)
       sudo pacman -Syu
       ;;
-		lmde)
-			sudo apt update
-			;;
     debian)
       sudo apt-get update; sudo apt-get upgrade
       ;;
@@ -149,9 +145,6 @@ function sys_install
 		case "$os" in
 			archlinux)
 				echo "pacman -S"
-				;;
-			lmde)
-				echo "apt install"
 				;;
       debian)
         echo "apt-get install"

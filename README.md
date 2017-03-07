@@ -12,6 +12,9 @@ Ce script fonctionne actuellement pour les OS basés sur :
 - OpenSUSE
 - Solus Project
 
+Attention :
+- Ce script ne fonctionne pas et ne fonctionnera jamais sous Linux Mint Debian Edition (LMDE).
+
 
 ## Utilisation :
 ./install `prénom.nom@epitech.eu`
